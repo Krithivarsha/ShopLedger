@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title"><title id="title">ShopLedger architecture</title><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#587391"/></marker></defs><rect width="1200" height="800" fill="#f1f5f9"/><g font-family="Segoe UI, sans-serif" fill="#14283e">
+<text x="36" y="62" font-size="36" font-weight="700">ShopLedger architecture</text>
+<text x="36" y="92" font-size="17" font-weight="400">Point of sale, inventory, customer credit and printable GST invoices</text>
+<rect x="36" y="119" width="300" height="77" rx="10" fill="#e4effd" stroke="#a5b9ce"/>
+<text x="50" y="144" font-size="17" font-weight="700">public/ · Browser UI</text>
+<text x="50" y="167" font-size="14" font-weight="400">POS, order history, Khata and GST Audit</text>
+<rect x="377" y="119" width="404" height="77" rx="10" fill="#e4effd" stroke="#a5b9ce"/>
+<text x="391" y="144" font-size="17" font-weight="700">server.js · Express</text>
+<text x="391" y="167" font-size="14" font-weight="400">Serves public/, mounts /api, renders invoice pages</text>
+<path d="M336 157L374 157" stroke="#587391" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M579 196L579 231" stroke="#587391" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="36" y="230" font-size="18" font-weight="700">API routes</text>
+<rect x="36" y="243" width="178" height="66" rx="10" fill="#fff" stroke="#a5b9ce"/>
+<text x="50" y="268" font-size="17" font-weight="700">products.js</text>
+<text x="50" y="291" font-size="14" font-weight="400">Catalog and coupons</text>
+<rect x="225" y="243" width="178" height="66" rx="10" fill="#fff" stroke="#a5b9ce"/>
+<text x="239" y="268" font-size="17" font-weight="700">orders.js</text>
+<text x="239" y="291" font-size="14" font-weight="400">List, place and cancel</text>
+<rect x="414" y="243" width="178" height="66" rx="10" fill="#fff" stroke="#a5b9ce"/>
+<text x="428" y="268" font-size="17" font-weight="700">customers.js</text>
+<text x="428" y="291" font-size="14" font-weight="400">Khata and settlements</text>
+<rect x="603" y="243" width="178" height="66" rx="10" fill="#fff" stroke="#a5b9ce"/>
+<text x="617" y="268" font-size="17" font-weight="700">reports.js</text>
+<text x="617" y="291" font-size="14" font-weight="400">Dashboard and GST audit</text>
+<text x="36" y="343" font-size="18" font-weight="700">Business logic and persistence · lib/</text>
+<rect x="36" y="356" width="241" height="64" rx="10" fill="#fff" stroke="#a5b9ce"/>
+<text x="50" y="381" font-size="17" font-weight="700">inventory.js</text>
+<text x="50" y="404" font-size="14" font-weight="400">Stock checks and reservations</text>
+<rect x="287" y="356" width="241" height="64" rx="10" fill="#fff" stroke="#a5b9ce"/>
+<text x="301" y="381" font-size="17" font-weight="700">pricing.js</text>
+<text x="301" y="404" font-size="14" font-weight="400">Checkout and invoice totals</text>
+<rect x="538" y="356" width="241" height="64" rx="10" fill="#fff" stroke="#a5b9ce"/>
+<text x="552" y="381" font-size="17" font-weight="700">coupons.js</text>
+<text x="552" y="404" font-size="14" font-weight="400">Coupon rules and discounts</text>
+<rect x="36" y="430" width="241" height="64" rx="10" fill="#fff" stroke="#a5b9ce"/>
+<text x="50" y="455" font-size="17" font-weight="700">tax.js</text>
+<text x="50" y="478" font-size="14" font-weight="400">HSN rates and CGST/SGST</text>
+<rect x="287" y="430" width="241" height="64" rx="10" fill="#fff" stroke="#a5b9ce"/>
+<text x="301" y="455" font-size="17" font-weight="700">orders.js</text>
+<text x="301" y="478" font-size="14" font-weight="400">Order records and cancellation</text>
+<rect x="538" y="430" width="241" height="64" rx="10" fill="#fff" stroke="#a5b9ce"/>
+<text x="552" y="455" font-size="17" font-weight="700">ledger.js</text>
+<text x="552" y="478" font-size="14" font-weight="400">Khata charges and settlements</text>
+<rect x="36" y="504" width="241" height="64" rx="10" fill="#fff" stroke="#a5b9ce"/>
+<text x="50" y="529" font-size="17" font-weight="700">dates.js</text>
+<text x="50" y="552" font-size="14" font-weight="400">Legacy date parsing</text>
+<rect x="287" y="504" width="241" height="64" rx="10" fill="#fff" stroke="#a5b9ce"/>
+<text x="301" y="529" font-size="17" font-weight="700">reports.js</text>
+<text x="301" y="552" font-size="14" font-weight="400">Ledger and invoice comparison</text>
+<rect x="538" y="504" width="241" height="64" rx="10" fill="#fff2df" stroke="#bc6717"/>
+<text x="552" y="529" font-size="17" font-weight="700">invoice.js · Ticket 1</text>
+<text x="552" y="552" font-size="14" font-weight="400">Print view and GST figures</text>
+<rect x="36" y="578" width="241" height="64" rx="10" fill="#fff" stroke="#a5b9ce"/>
+<text x="50" y="603" font-size="17" font-weight="700">store.js</text>
+<text x="50" y="626" font-size="14" font-weight="400">Reads, writes and audit log</text>
+<path d="M154 642L154 681" stroke="#587391" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="36" y="684" width="365" height="77" rx="10" fill="#fff" stroke="#a5b9ce"/>
+<text x="50" y="709" font-size="17" font-weight="700">data/db.json</text>
+<text x="50" y="732" font-size="14" font-weight="400">Products, orders, customers and audit log</text>
+<rect x="414" y="684" width="367" height="77" rx="10" fill="#fff" stroke="#a5b9ce"/>
+<text x="428" y="709" font-size="17" font-weight="700">config.js</text>
+<text x="428" y="732" font-size="14" font-weight="400">Shop settings, GST slabs and coupons</text>
+<rect x="810" y="119" width="354" height="642" rx="10" fill="#fff" stroke="#a5b9ce"/>
+<text x="824" y="144" font-size="17" font-weight="700">Placing an order</text>
+<circle cx="836" cy="175" r="12" fill="#21558e"/>
+<text x="836" y="180" text-anchor="middle" fill="white" font-size="14">1</text>
+<text x="857" y="180" font-size="16" font-weight="700">Submit the cart</text>
+<text x="857" y="202" font-size="14" font-weight="400">Browser sends POST /api/orders.</text>
+<text x="857" y="221" font-size="14" font-weight="400">Express dispatches to routes/orders.js.</text>
+<circle cx="836" cy="256" r="12" fill="#21558e"/>
+<text x="836" y="261" text-anchor="middle" fill="white" font-size="14">2</text>
+<text x="857" y="261" font-size="16" font-weight="700">Read products and check stock</text>
+<text x="857" y="283" font-size="14" font-weight="400">store.read() loads the JSON data.</text>
+<text x="857" y="302" font-size="14" font-weight="400">inventory.check() verifies sellable stock.</text>
+<circle cx="836" cy="337" r="12" fill="#21558e"/>
+<text x="836" y="342" text-anchor="middle" fill="white" font-size="14">3</text>
+<text x="857" y="342" font-size="16" font-weight="700">Validate coupon and price</text>
+<text x="857" y="364" font-size="14" font-weight="400">coupons.validate() checks the code.</text>
+<text x="857" y="383" font-size="14" font-weight="400">pricing.computeTotals() applies GST.</text>
+<circle cx="836" cy="418" r="12" fill="#21558e"/>
+<text x="836" y="423" text-anchor="middle" fill="white" font-size="14">4</text>
+<text x="857" y="423" font-size="16" font-weight="700">Charge Khata if selected</text>
+<text x="857" y="445" font-size="14" font-weight="400">ledger.chargeOrderToKhata()</text>
+<text x="857" y="464" font-size="14" font-weight="400">records the amount on the account.</text>
+<circle cx="836" cy="499" r="12" fill="#21558e"/>
+<text x="836" y="504" text-anchor="middle" fill="white" font-size="14">5</text>
+<text x="857" y="504" font-size="16" font-weight="700">Reserve stock and add the order</text>
+<text x="857" y="526" font-size="14" font-weight="400">inventory.reserve() updates stock.</text>
+<text x="857" y="545" font-size="14" font-weight="400">orders.add() records amounts and items.</text>
+<circle cx="836" cy="580" r="12" fill="#21558e"/>
+<text x="836" y="585" text-anchor="middle" fill="white" font-size="14">6</text>
+<text x="857" y="585" font-size="16" font-weight="700">Audit and save</text>
+<text x="857" y="607" font-size="14" font-weight="400">store.appendAudit() logs the order.</text>
+<text x="857" y="626" font-size="14" font-weight="400">store.write() saves data/db.json.</text>
+<circle cx="836" cy="661" r="12" fill="#21558e"/>
+<text x="836" y="666" text-anchor="middle" fill="white" font-size="14">7</text>
+<text x="857" y="666" font-size="16" font-weight="700">Return the order</text>
+<text x="857" y="688" font-size="14" font-weight="400">HTTP 201 returns the saved order.</text>
+<text x="857" y="707" font-size="14" font-weight="400">The invoice view uses lib/invoice.js.</text>
+</g></svg>
